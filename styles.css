@@ -1,0 +1,59 @@
+/*!Variables*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap');
+
+
+:root {
+    --bg-color-primary: #13326f;
+    --bg-color-secondary: #e98628;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color-primary);
+    font-family: 'Roboto', 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.highlight {
+    color: var(--bg-color-secondary);
+}
+
+
+/*!@Media queries*/
+/*Extra large screens, TV.*/
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+/*Desktops, large screens*/
+@media screen and (min-width: 1025px) {
+
+}
+
+/*Small screens, laptops*/
+@media screen and (min-width: 769px) {
+
+}
+
+/*iPads, Tablets*/
+@media screen and (min-width: 481px) {
+
+}
+
+/*Mobile devices*/
+@media screen and (min-width: 320px) {
+
+}
