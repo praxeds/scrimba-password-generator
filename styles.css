@@ -4,9 +4,13 @@
 
 
 :root {
-    --bg-color-primary: #64b385;
-    --bg-color-secondary: #481A80;
-    --bg-color-secondary-darker: #00b83a;
+    --bg-color-primary: #44147e;
+    --bg-color-secondary: #43a76d;
+    --bg-color-secondary-darker: #0b9444;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 
@@ -14,6 +18,7 @@ body {
     background: var(--bg-color-primary);
     font-family: 'Roboto', 'Verdana', 'Geneva', 'Tahoma', sans-serif;
     color: white;
+    margin: 0;
 }
 
 .bold {
@@ -29,11 +34,13 @@ div {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
+    margin-bottom: 10px;
 }
 
 p {
-    font-size: 1.3rem;
+    font-size: 1rem;
+    margin-bottom: 50px;
 }
 
 hr {
@@ -41,7 +48,16 @@ hr {
     border: 1px solid;
 }
 
-/*Main*/
+/*!Main*/
+
+main {
+    width: 600px;
+    height: 650px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .btn.div {
     display: flex;
@@ -51,8 +67,8 @@ hr {
 
 button {
     font-size: 1.3rem;
-    padding: 20px 0;
-    width: 345px;
+    padding: 10px 0;
+    width: 288px;
     color: white;
     border-radius: 10px;
     border-style: none;
@@ -65,4 +81,73 @@ button:hover {
     background-color: var(--bg-color-secondary-darker);
 }
 
+.checkbox.div input[type="checkbox"] {
+    display: none;
+}
 
+.checkbox.div input[type="checkbox"]+label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+
+    font: 14px/20px "Open Sans", Arial, sans-serif;
+    cursor: pointer;
+}
+
+.checkbox.div input[type="checkbox"]:hover+label:hover {
+    color: var(--bg-color-secondary);
+}
+
+.checkbox.div input[type="checkbox"]:hover+label:before {
+    box-shadow: inset 0px 0px 0px 2px #f7f2f2;
+}
+
+.checkbox.div input[type="checkbox"]+label:last-child {
+    margin-bottom: 0;
+}
+
+.checkbox.div input[type="checkbox"]+label:before {
+    content: "";
+    display: block;
+    width: 1.4em;
+    height: 1.4em;
+    border: 1px solid var(--bg-color-secondary);
+    border-radius: 0.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: all 0.2s, background 0.2s ease-in-out;
+    transition: all 0.2s, background 0.2s ease-in-out;
+    background: #f3f3f3;
+}
+
+.checkbox.div input[type="checkbox"]:checked+label:before {
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 0.2em;
+    border: 2px solid #fff;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background: var(--bg-color-secondary);
+    box-shadow: 0 0 0 1px var(--bg-color-secondary);
+}
+
+/*!Footer*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    background-color: #090909;
+}
+
+.footer {
+    font-size: small;
+    margin: 5px 0 5px 20px;
+    color: var(--text-color2);
+}
+
+a {
+    color: var(--text-color2);
+}
