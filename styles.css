@@ -4,21 +4,16 @@
 
 
 :root {
-    --bg-color-primary: #13326f;
-    --bg-color-secondary: #e98628;
+    --bg-color-primary: #64b385;
+    --bg-color-secondary: #481A80;
+    --bg-color-secondary-darker: #00b83a;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     background: var(--bg-color-primary);
     font-family: 'Roboto', 'Verdana', 'Geneva', 'Tahoma', sans-serif;
     color: white;
-    font-size: 25px;
 }
 
 .bold {
@@ -29,31 +24,45 @@ body {
     color: var(--bg-color-secondary);
 }
 
-
-/*!@Media queries*/
-/*Extra large screens, TV.*/
-@media screen and (min-width: 1200px) {
-    h1 {
-        font-size: 4rem;
-    }
+div {
+    margin-bottom: 20px;
 }
 
-/*Desktops, large screens*/
-@media screen and (min-width: 1025px) {
-
+h1 {
+    font-size: 4rem;
 }
 
-/*Small screens, laptops*/
-@media screen and (min-width: 769px) {
-
+p {
+    font-size: 1.3rem;
 }
 
-/*iPads, Tablets*/
-@media screen and (min-width: 481px) {
-
+hr {
+    margin: 30px 0;
+    border: 1px solid;
 }
 
-/*Mobile devices*/
-@media screen and (min-width: 320px) {
+/*Main*/
 
+.btn.div {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
 }
+
+button {
+    font-size: 1.3rem;
+    padding: 20px 0;
+    width: 345px;
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    text-align: center;
+    background-color: var(--bg-color-secondary);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--bg-color-secondary-darker);
+}
+
+
