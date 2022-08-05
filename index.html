@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Password Generator</title>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
   <main>
-    <h1>Generate a<br><span class="highlight">random password</span></h1>
-    <p>Create strong and secure passwords to keep your account safe online.</p>
-    <button class="btn" onclick="getPassword()">Generate Password</button>
+    <section>
+      <h1>Generate a random password</h1>
+      <h2>Create strong and secure passwords to keep your account safe online.</h2>
+    </section>
 
-    <hr>
+    <section>
+      <button>Generate Password</button>
+    </section>
 
-    <div class="btn div">
-      <button class="btn" id="password1-el"></button>
-      <button class="btn" id="password2-el"></button>
-    </div>
-    
-    <!-- * To-do later
-    <div class="settings">
-      <div class="checkbox div" onclick="getPassword()">
-        <input checked type="checkbox" id="lowercase-characters" name="check">
-        <label for="lowercase-characters">Lowercase</label>
+    <section>
+      <div>
+        <label for="passwordLength">Password length</label>
+        <input onkeypress="return false" id="passwordLength" type="number" name="passwordLength" value="8" min="8" max="50">
       </div>
-
-      <div class="checkbox div" onclick="getPassword()">
-        <input checked type="checkbox" id="uppercase-characters" name="check">
-        <label for="uppercase-characters">Uppercase</label>
+      <div>
+        <label for="passwordLowercase">Lowercase characters</label>
+        <input checked type="checkbox" id="passwordLowercase" name="passwordLowercase">
       </div>
-
-      <div class="checkbox div" onclick="getPassword()">
-        <input checked type="checkbox" id="numeric-characters" name="check">
-        <label for="numeric-characters">Numbers</label>
+      <div>
+        <label for="passwordUppercase">Uppercase characters</label>
+        <input checked type="checkbox" id="passwordUppercase" name="passwordUppercase">
       </div>
-
-      <div class="checkbox div" onclick="getPassword()">
-        <input checked type="checkbox" id="special-characters" name="check">
-        <label for="special-characters">Symbols</label>
+      <div>
+        <label for="passwordSymbols">Symbols</label>
+        <input checked type="checkbox" id="passwordSymbols" name="passwordSymbols">
       </div>
-    </div>
-    -->
+      <div>
+        <label for="passwordNumbers">Numbers</label>
+        <input checked type="checkbox" id="passwordNumbers" name="passwordNumbers">
+      </div>
+    </section>
 
+    <section>
+      <div class="randomPassword"></div>
+      <div class="randomPassword"></div>
+      <div class="randomPassword"></div>
+      <div class="randomPassword"></div>
+    </section>
   </main>
-
-  <footer>
-    <p class="footer">Made by <a href="https://github.com/praxeds">Juliana Praxedes</a></p>
-    <p class="footer">Website made as part of the JavaScript Course provided by <a href="https://scrimba.com/">Scrimba</a></p>
- </footer>
- 
   <script src="script.js"></script>
 </body>
-
 </html>

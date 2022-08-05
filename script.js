@@ -1,47 +1,41 @@
-const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
-"/"];
-
-
+//!Password Variables
 const lowercaseCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
 const uppercaseCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-
 const numberCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-
 const specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*']
 
-let passwordCharacters = []
+let passwordGenerator = document.querySelector('button')
+let passwordLength = document.querySelector('#passwordLength')
+let randomPassword = document.querySelectorAll('.randomPassword')
+let passwordOptions = []
 
+//!Password Function
 let generatedPassword = ''
 
-// 
+passwordLength.addEventListener('keypress', function(e) {
+    return false
+})
 
-//* To Do Later
+passwordGenerator.addEventListener('click', function (e) {
 
-//
-let passwordFirstEl = document.getElementById('password1-el')
-let passwordSecondEl = document.getElementById('password2-el')
+    randomPassword.forEach(function (passwordDiv) {
 
-let lowercaseCheckbox = document.getElementById('lowercase-characters')
-let uppercaseCheckbox = document.getElementById('uppercase-characters')
-let numberCheckbox = document.getElementById('numeric-characters')
-let symbolCheckbox = document.getElementById('special-characters')
-//
+        if (document.getElementById('passwordLowercase').checked) {
+            passwordOptions = passwordOptions.concat(lowercaseCharacters)
+        } if (document.getElementById('passwordUppercase').checked) {
+            passwordOptions = passwordOptions.concat(uppercaseCharacters)
+        } if (document.getElementById('passwordSymbols').checked) {
+            passwordOptions = passwordOptions.concat(specialCharacters)
+        } if (document.getElementById('passwordNumbers').checked) {
+            passwordOptions = passwordOptions.concat(numberCharacters)
+        }
 
-//
+        for (i = 0; i < passwordLength.value; i++) {
+            generatedPassword += passwordOptions[Math.floor(Math.random() * passwordOptions.length)]
+        }
+        passwordDiv.innerHTML = generatedPassword
+        generatedPassword = ''
+        passwordOptions = []
+    })
 
-document.onload = getPassword()
-
-function getPassword() {
-    for (let i = 0; i < 15; i++) {
-        generatedPassword += characters[Math.floor(Math.random() * characters.length)]
-    }
-    passwordFirstEl.textContent = generatedPassword
-    generatedPassword = ''
-
-    for (let i = 0; i < 15; i++) {
-        generatedPassword += characters[Math.floor(Math.random() * characters.length)]
-    }
-    passwordSecondEl.textContent = generatedPassword
-    generatedPassword = ''
-}
+})
