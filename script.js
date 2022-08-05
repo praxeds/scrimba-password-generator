@@ -12,7 +12,7 @@ let passwordOptions = []
 //!Password Function
 let generatedPassword = ''
 
-passwordLength.addEventListener('keypress', function(e) {
+passwordLength.addEventListener('keypress', function (e) {
     return false
 })
 
@@ -39,3 +39,14 @@ passwordGenerator.addEventListener('click', function (e) {
     })
 
 })
+
+randomPassword.forEach(function (passwordClipboard) {
+    passwordClipboard.addEventListener('click', function (e) {
+            navigator.clipboard.writeText(passwordClipboard.innerHTML).then(() => {
+            alert("Copied to clipboard");
+        });
+    })
+})
+
+
+
