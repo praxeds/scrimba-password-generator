@@ -39,7 +39,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<video type="video/mp4" autoplay src="assets/demoVideo.mp4"></video>
+<img align="center" alt="Demo gif" src="assets/demo.gif">
 
 Features
 * Ability to set password length (min 8 characters, max 30);
