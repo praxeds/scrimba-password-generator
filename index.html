@@ -24,7 +24,13 @@
     <section>
       <div>
         <label for="passwordLength">Password length</label>
-        <input id="passwordLength" type="number" name="passwordLength" value="8" min="8" max="30">
+
+        <button id="addBtn" data-type="add" title="Add 1"
+          aria-controls="spinner-input">+</button>
+        <input onkeypress="return false" id="passwordLength" type="number" name="passwordLength" value="8" min="8"
+          max="30">
+        <button id="subsBtn" data-type="subtract" title="Subtract 1"
+          aria-controls="spinner-input">-</button>
       </div>
       <div>
         <label for="passwordLowercase">Lowercase characters</label>

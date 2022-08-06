@@ -8,16 +8,23 @@ let passwordGenerator = document.querySelector('button')
 let passwordLength = document.querySelector('#passwordLength')
 let randomPassword = document.querySelectorAll('.randomPassword')
 let passwordOptions = []
-
-//!Password Function
 let generatedPassword = ''
 
-passwordLength.addEventListener('keypress', function (e) {
-    return false
+let addButton = document.getElementById('addBtn')
+let subsButton = document.getElementById('subsBtn')
+
+//!Event Listeners
+window.addEventListener('load', (e) => {
+    generatePassword()
 })
 
-passwordGenerator.addEventListener('click', function (e) {
+passwordGenerator.addEventListener('click', generatePassword)
 
+addButton.addEventListener('click', increaseOne)
+subsButton.addEventListener('click', decreaseOne)
+
+//!Functions
+function generatePassword() {
     randomPassword.forEach(function (passwordDiv) {
 
         if (document.getElementById('passwordLowercase').checked) {
@@ -37,7 +44,7 @@ passwordGenerator.addEventListener('click', function (e) {
         generatedPassword = ''
         passwordOptions = []
     })
-})
+}
 
 randomPassword.forEach(function (passwordClipboard) {
     passwordClipboard.addEventListener('click', function (e) {
@@ -46,6 +53,20 @@ randomPassword.forEach(function (passwordClipboard) {
         });
     })
 })
+
+function increaseOne() {
+    while (passwordLength.valueAsNumber < 30) {
+        passwordLength.valueAsNumber += 1
+        break
+    }
+}
+
+function decreaseOne() {
+    while (passwordLength.valueAsNumber > 8) {
+        passwordLength.valueAsNumber -= 1
+        break
+    }
+}
 
 
 
