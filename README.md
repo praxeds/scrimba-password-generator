@@ -39,11 +39,12 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+<video type="video/mp4" autoplay src="assets/demoVideo.mp4"></video>
 
-To-do list:
-* Ability to set password length;
-* Add "copy-on-click";
-* Toggle "symbols" and "numbers" on/off
+Features
+* Ability to set password length (min 8 characters, max 30);
+* Copy to clipboard on click;
+* Lowercase, uppercase, symbols and numbers toggle options.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
