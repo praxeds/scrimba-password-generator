@@ -13,6 +13,8 @@ let generatedPassword = ''
 let addButton = document.getElementById('addBtn')
 let subsButton = document.getElementById('subsBtn')
 
+let popUp = document.getElementById('copyToClipboard')
+
 //!Event Listeners
 window.addEventListener('load', (e) => {
     generatePassword()
@@ -49,8 +51,9 @@ function generatePassword() {
 randomPassword.forEach(function (passwordClipboard) {
     passwordClipboard.addEventListener('click', function (e) {
         navigator.clipboard.writeText(passwordClipboard.innerHTML).then(() => {
-            alert("Copied to clipboard");
+            popUp.classList.add('popUp')
         });
+        popUp.classList.remove('popUp')
     })
 })
 
