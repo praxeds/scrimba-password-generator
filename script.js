@@ -37,16 +37,16 @@ passwordGenerator.addEventListener('click', function (e) {
         generatedPassword = ''
         passwordOptions = []
     })
-
 })
 
 randomPassword.forEach(function (passwordClipboard) {
     passwordClipboard.addEventListener('click', function (e) {
-            navigator.clipboard.writeText(passwordClipboard.innerHTML).then(() => {
+        navigator.clipboard.writeText(passwordClipboard.innerHTML).then(() => {
             alert("Copied to clipboard");
         });
     })
 })
+
 
 
 

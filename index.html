@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,11 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <main>
     <section>
-      <h1>Generate a random password</h1>
+      <h1>Generate a<br><span>random password</span></h1>
       <h2>Create strong and secure passwords to keep your account safe online.</h2>
     </section>
 
@@ -22,7 +24,7 @@
     <section>
       <div>
         <label for="passwordLength">Password length</label>
-        <input onkeypress="return false" id="passwordLength" type="number" name="passwordLength" value="8" min="8" max="50">
+        <input id="passwordLength" type="number" name="passwordLength" value="8" min="8" max="30">
       </div>
       <div>
         <label for="passwordLowercase">Lowercase characters</label>
@@ -43,12 +45,26 @@
     </section>
 
     <section>
-      <div class="randomPassword"></div>
-      <div class="randomPassword"></div>
-      <div class="randomPassword"></div>
-      <div class="randomPassword"></div>
+      <div>
+        <p class="randomPassword"></p>
+      </div>
+      <div>
+        <p class="randomPassword"></p>
+      </div>
+      <div>
+        <p class="randomPassword"></p>
+      </div>
+      <div>
+        <p class="randomPassword"></p>
+      </div>
     </section>
   </main>
+
+  <footer>
+    <p>Made by <a href="https://github.com/praxeds">Juliana Praxedes</a></p>
+    <p>Website made as part of the JavaScript Course provided by <a href="https://scrimba.com/">Scrimba</a></p>
+  </footer>
   <script src="script.js"></script>
 </body>
+
 </html>
