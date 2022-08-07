@@ -39,7 +39,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<img align="center" alt="Demo gif" src="assets/demo.gif">
+<div align="center">
+<img alt="Demo gif" src="assets/demo.gif">
+</div>
 
 Features
 * Ability to set password length (min 8 characters, max 30);
